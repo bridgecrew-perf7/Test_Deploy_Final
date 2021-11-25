@@ -1,0 +1,180 @@
+.profile {
+  margin-top: 5rem;
+  .profile-container,
+  .profile-name,
+  .profile-follow {
+    @extend %flex-row-i-center;
+    margin-bottom: 0.8rem;
+  }
+  .profile-img-box {
+    width: 14rem;
+    height: 14rem;
+    margin-right: 5rem;
+    border-radius: 50rem;
+    overflow: hidden;
+    position: relative;
+  }
+  .profile-img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .profile-displayname {
+    color: map-get($color, primary);
+    font-weight: 500;
+    margin-left: 2.5rem;
+  }
+  .profile-follow-number {
+    font-weight: 600;
+    margin-right: 0.8rem;
+    font-size: map-get($font-size, lg);
+  }
+  .profile-follow-text {
+    color: map-get($color, grey-c);
+    font-weight: 400;
+    margin-right: 2.5rem;
+  }
+  .profile-actions {
+    margin-top: 1.5rem;
+  }
+}
+.user-article {
+  margin-top: 6rem;
+  .user-article-card {
+    // background-color: #eee;
+    flex-direction: row;
+    gap: 3rem;
+    margin-bottom: 2rem;
+    .article-header {
+      padding-bottom: 23%;
+      flex: 4;
+    }
+    .article-body {
+      flex: 10;
+      .article-title-text {
+        line-height: 1.5;
+        font-size: map-get($font-size, "xl");
+        margin: 1.4rem 0 0.6rem;
+        min-height: unset;
+        word-break: break-all;
+      }
+      .article-content {
+        margin-bottom: 1.2rem;
+        word-break: break-all;
+      }
+      .article-reaction {
+        font-weight: 500;
+        @extend %flex-row-i-center;
+        gap: 0.6rem;
+      }
+      .article-reaction-icon {
+        display: block;
+        width: 1.6rem;
+      }
+      .article-reaction-text {
+        color: map-get($color, grey-c);
+        margin-right: 1.2rem;
+        &.reaction-text-like {
+          &:hover {
+            cursor: pointer;
+            color: map-get($color, primary );
+          }
+        }
+      }
+    }
+    .article-footer {
+      @extend %flex-row-c-btw-i-center;
+    }
+  }
+}
+.disableLink {
+  pointer-events: none;
+  cursor: default;
+}
+.follow {
+  margin-top: 3rem;
+  .row {
+    margin: 0 -1rem;
+  }
+  .col {
+    padding: 0 1rem;
+  }
+  .follow-title {
+    font-size: map-get($font-size, xl);
+    font-weight: 500;
+  }
+  .follow-list {
+    margin-top: 2.5rem;
+  }
+  .follow-item {
+    @extend %flex-column-i-center;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    border: 1px solid map-get($color, grey-b);
+    padding: 2rem;
+    padding-top: 2.5rem;
+    .follow-img-box {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50rem;
+      overflow: hidden;
+      position: relative;
+      border: 1px solid map-get($color, grey-b);
+    }
+    .follow-img {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    .follow-fullname {
+      font-size: map-get($font-size, normal);
+      font-weight: 500;
+      margin-top: 1.5rem;
+    }
+    .follow-displayname {
+      color: map-get($color, primary);
+      font-size: map-get($font-size, sm);
+    }
+  }
+}
+.post-author-subcription {
+  border-radius: 2rem;
+  .author-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .author-img {
+      width: 8rem;
+      height: 8rem;
+      object-fit: cover;
+      margin-right: 3rem;
+      border-radius: 50%;
+    }
+    .author-display-name {
+      font-size: map-get($font-size, normal);
+      font-weight: 400;
+    }
+  }
+  .author-action {
+    margin-left: 8rem;
+  }
+}
+@media screen and (max-width: map-get($breakpoints, small)) {
+  .follow {
+    margin-top: 2.5rem;
+    .follow-title {
+      font-size: map-get($font-size, lg);
+      text-align: center;
+    }
+    .follow-list {
+      margin-top: 2rem;
+    }
+    .follow-item {
+      max-width: 30rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

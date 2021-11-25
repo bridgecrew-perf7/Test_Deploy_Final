@@ -1,0 +1,116 @@
+.form {
+  .form-control {
+    margin-bottom: 1rem;
+  }
+  .form-label {
+    display: block;
+    margin-bottom: 0.6rem;
+  }
+  .form-input {
+    font-family: inherit;
+    font-size: inherit;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0.8rem;
+    &.invalid {
+      outline-color: map-get($color, "danger");
+    }
+  }
+  .form-error {
+    font-size: map-get($font-size, "sm");
+    color: map-get($color, "danger");
+    display: block;
+    margin-top: 0.5rem;
+  }
+  &.form-outline {
+    background-color: map-get($color, "grey-a");
+    border: 1px solid map-get($color, "grey-b");
+  }
+  &.form-horizontal {
+    border-radius: 3rem;
+    padding: 4rem 10rem 3rem;
+    .form-control {
+      @extend %flex-row;
+    }
+    .form-box {
+      width: 100%;
+      &.form-6 {
+        @extend %flex-row;
+        gap: 1rem;
+      }
+      &.form-radio {
+        @extend %flex-row-i-center;
+        gap: 3rem;
+        margin: 1rem 0rem 0.5rem;
+      }
+    }
+    .form-label-box {
+      width: 28rem;
+    }
+    .form-label {
+      margin-top: 1.6rem;
+      line-height: 1;
+    }
+    .form-radio-label {
+      margin-left: 1rem;
+    }
+  }
+}
+@media screen and (max-width: map-get($breakpoints, "wide")) {
+  .form {
+    &.form-horizontal {
+      padding: 4rem;
+      padding-bottom: 3rem;
+      border-radius: 1rem;
+    }
+  }
+}
+@media screen and (max-width: map-get($breakpoints, "medium")) {
+  .form {
+    &.form-horizontal {
+      padding: 2rem 1.6rem;
+      .form-label-box {
+        width: 25rem;
+      }
+      .form-box {
+        &.form-radio {
+          gap: 2rem;
+        }
+      }
+      .form-radio-label {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: map-get($breakpoints, "small")) {
+  .form {
+    .form-label {
+      font-size: map-get($font-size, sm);
+      margin-bottom: 0.4rem;
+    }
+    .form-error {
+      margin-top: 0.3rem;
+    }
+    &.form-login {
+      padding: 2rem 1.6rem;
+    }
+    &.form-horizontal {
+      .form-control {
+        flex-direction: column;
+        margin-bottom: 1.4rem;
+      }
+      .form-label {
+        margin-top: 0;
+        margin-bottom: 0.6rem;
+        line-height: 1.6;
+      }
+      .form-box {
+        &.form-radio {
+          margin-top: 0;
+          font-size: map-get($font-size, sm);
+        }
+      }
+    }
+  }
+}

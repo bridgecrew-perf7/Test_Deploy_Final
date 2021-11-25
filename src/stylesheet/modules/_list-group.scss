@@ -1,0 +1,35 @@
+.list-group {
+  .list-group-item {
+    margin: 1.2rem 0;
+  }
+  .list-group-link:link,
+  .list-group-link:visited {
+    color: map-get($color, "grey-c");
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+  .list-group-link:hover,
+  .list-group-link:active {
+    color: map-get($color, "primary");
+  }
+}
+.list-group-title {
+  font-weight: 500;
+  font-size: map-get($font-size, "normal");
+  margin-bottom: 2rem;
+}
+@media screen and (max-width: map-get($breakpoints, "medium")) {
+  .list-group {
+    .list-group-item {
+      margin: 1rem 0;
+    }
+  }
+  .list-group-title {
+    margin-bottom: 1.2rem;
+  }
+}
+@media screen and (max-width: map-get($breakpoints, "small")) {
+  .list-group-title {
+    margin-top: 1.2rem;
+  }
+}

@@ -1,0 +1,28 @@
+.prompt {
+  position: fixed;
+  top: 10rem;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 50rem;
+  width: 100%;
+  background-color: map-get($color, white);
+  z-index: 102;
+  border-radius: 1.5rem;
+  padding: 2.5rem 3rem;
+  @extend %flex-column;
+  gap: 2rem;
+  .prompt-title {
+    font-size: map-get($font-size, xl);
+  }
+  .prompt-message {
+    color: map-get($color, grey-c);
+  }
+  .prompt-actions {
+    margin-top: 1rem;
+    @extend %flex-row-c-end-i-center;
+    gap: 1.5rem;
+    .prompt-btn {
+      width: 12rem;
+    }
+  }
+}

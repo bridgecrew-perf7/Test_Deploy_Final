@@ -1,0 +1,125 @@
+.account-page {
+  margin: 4rem auto;
+  form {
+    max-width: 100%;
+    width: 88rem;
+    margin: 0 auto;
+  }
+  .message {
+    display: block;
+  }
+  .heading {
+    font-size: map-get($font-size, "xxxl");
+  }
+  .sub-heading {
+    font-size: map-get($font-size, "xl");
+    margin-bottom: 2rem;
+  }
+  .profile-img-box {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    .profile-img {
+      position: relative;
+      width: 15rem;
+      height: 15rem;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+    }
+    form {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      border-radius: 50%;
+      input[type="file"] {
+        display: none;
+      }
+      .avatar-upload {
+        display: block;
+        cursor: pointer;
+        height: 100%;
+        width: 100%;
+        color: map-get($color, white);
+        border-radius: 50%;
+        &:hover {
+          background-color: rgba($color: map-get($color, grey-c), $alpha: 0.5);
+          transition: all 0.5s ease;
+        }
+      }
+      .submit-btn {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        .loading-indicator {
+          width: 2.4rem;
+          height: 2.4rem;
+        }
+        img {
+          display: block;
+        }
+        padding: 0.5rem;
+      }
+    }
+  }
+  .personal-info {
+    &-box {
+      margin: 0 auto;
+      max-width: 100%;
+      padding-left: 5rem;
+      padding-right: 5rem;
+      padding-top: 3.5rem;
+      border: 1px solid map-get($color, grey-b);
+      border-radius: 1rem;
+    }
+    .info-box {
+      margin-bottom: 1rem;
+      .info-label {
+        display: inline-block;
+        width: 18rem;
+        font-weight: normal;
+      }
+    }
+    &-action {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      padding: .75rem 0;
+      font-size: map-get($font-size, sm);
+      text-align: center;
+    }
+  }
+}
+@media screen and (max-width: map-get($breakpoints, medium)) {
+  .account-page {
+    .personal-info {
+      &-box {
+        padding-left: 2.3rem;
+        padding-right: 2.3rem;
+      }
+      &-action {
+        width: 18rem;
+      }
+      .info-box {
+        margin-bottom: 1rem;
+        .info-label {
+          display: inline-block;
+          width: 14rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: map-get($breakpoints, small)) {
+  .account-page {
+    .personal-info {
+      .info-box {
+        .info-label {
+          display: block;
+        }
+      }
+    }
+  }
+}

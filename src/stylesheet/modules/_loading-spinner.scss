@@ -1,0 +1,31 @@
+.loading-indicator {
+  width: 2.2rem;
+  display: block;
+  margin: 0 auto;
+}
+@keyframes slideFromTop {
+  0% {
+    margin-top: -7rem;
+    width: 0;
+  }
+  95% {
+    margin-top: 5.3rem;
+    width: 7rem;
+  }
+  100% {
+    margin-top: 5rem;
+    width: 7rem;
+  }
+}
+.page-loading-spinner {
+  margin: 0 auto;
+  width: fit-content;
+  img {
+    margin-top: 5rem;
+    width: 7rem;
+    border-radius: 50%;
+    box-shadow: 0 0 5px gray;
+    animation: slideFromTop 0.1s ease-out;
+    z-index: 1;
+  }
+}

@@ -1,0 +1,36 @@
+.notification {
+  position: fixed;
+  top: 7rem;
+  right: 50%;
+  transform: translate(50%, 0);
+  border-radius: 0 0 2rem 2rem;
+  z-index: 10;
+  margin: 0;
+  color: map-get($color, white);
+  overflow: hidden;
+  animation: slideFromTop 4s forwards;
+  .notification-text {
+    padding: 1.2rem 2.3rem;
+    display: block;
+    &.success {
+      background-color: map-get($color, success);
+    }
+    &.error {
+      background-color: map-get($color, danger);
+    }
+  }
+}
+@keyframes slideFromTop {
+  0% {
+    top: -7rem;
+  }
+  20% {
+    top: 7.3rem;
+  }
+  80% {
+    top: 7.3rem;
+  }
+  100% {
+    top: -7rem;
+  }
+}

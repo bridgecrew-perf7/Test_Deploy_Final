@@ -1,0 +1,228 @@
+.section-title {
+  margin-bottom: 3rem;
+  padding-left: 2rem;
+  position: relative;
+  color: map-get($color, dark-blue);
+  line-height: 3.2rem;
+  &::before {
+    content: "";
+    border-radius: 10rem;
+    position: absolute;
+    height: 100%;
+    width: 5px;
+    top: 0;
+    left: 0;
+    background-color: map-get($color, primary);
+  }
+}
+.public {
+  margin-top: 8rem;
+  .row {
+    row-gap: 5rem;
+  }
+}
+.public-pagination {
+  margin-top: 6rem;
+  text-align: center;
+}
+.featured {
+  margin-top: 8rem;
+  .row {
+    row-gap: 2rem;
+  }
+  .featured-card-right:not(:last-child) {
+    padding-bottom: 2rem;
+  }
+  .featured-card {
+    flex-direction: row;
+    gap: 2rem;
+    .article-header {
+      padding-bottom: 23%;
+      flex: 2;
+    }
+    .article-body {
+      flex: 3;
+      .article-title-text {
+        font-size: map-get($font-size, lg);
+        line-height: 1.6;
+        min-height: unset;
+        margin-bottom: .5rem;
+      }
+      .article-datetime {
+        font-size: map-get($font-size, sm);
+        color: map-get($color, grey-c);
+      }
+    }
+  }
+  .article-card {
+    .article-body {
+      flex: 3;
+      .article-title-text {
+        min-height: unset;
+      }
+      .article-content {
+        min-height: unset;
+      }
+    }
+  }
+}
+.banner {
+  background: url("/assets/images/banner.jpg");
+  background-size: cover;
+  width: 100%;
+  .banner-content {
+    padding: 9rem 0;
+    text-align: center;
+    color: map-get($color, white);
+    .banner-line {
+      display: inline-block;
+      width: 55%;
+      height: 4px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      background-color: map-get($color, white);
+      opacity: 0.5;
+    }
+    .banner-content-heading {
+      font-size: 9rem;
+      font-weight: 900;
+    }
+    .banner-content-subheading {
+      text-transform: uppercase;
+      font-size: 2rem;
+    }
+  }
+}
+.line {
+  margin: 1rem 0;
+  .line-text {
+    overflow: hidden;
+    text-align: center;
+    font-size: map-get($font-size, lg);
+    font-weight: 500;
+    color: map-get($color, grey-c);
+    &::before, &::after {
+      background-color: map-get($color, grey-c);
+      opacity: 0.38;
+      content: "";
+      display: inline-block;
+      height: 1px;
+      position: relative;
+      vertical-align: middle;
+      width: 43%;
+    }
+    &::before {
+      right: 0.5em;
+      margin-left: -50%;
+    }
+    &::after {
+      left: 0.5em;
+      margin-right: -50%;
+    }
+  }
+}
+
+@media screen and (max-width: map-get($breakpoints, medium)) { 
+  .public {
+    margin-top: 4.8rem;
+    .row {
+      row-gap: 4rem;
+    }
+  }
+  .featured {
+    margin-top: 4.8rem;
+    .row {
+      row-gap: 3rem;
+    }
+    .featured-card-right:not(:last-child) {
+      padding-bottom: 1rem;
+    }
+    .featured-card {
+      .article-header {
+        padding-bottom: 20%;
+        .article-img {
+          border-radius: 1rem;
+        }
+      }
+      .article-body {
+        flex: 4;
+        .article-title-text {
+          font-size: 1.6rem;
+          line-height: 1.6;
+        }
+        .article-datetime {
+          font-size: map-get($font-size, sm);
+        }
+      }
+    }
+  }
+  .banner {
+    .banner-content {
+      .banner-line {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+      }
+      .banner-content-heading {
+        font-size: 6rem;
+      }
+      .banner-content-subheading {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: map-get($breakpoints, small)) { 
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2.4rem;
+  }
+  .public {
+    margin-top: 4.2rem;
+    .row {
+      row-gap: 3rem;
+    }
+  }
+  .featured {
+    margin-top: 4.2rem;
+    .row {
+      row-gap: 3rem;
+    }
+    .featured-card-right:not(:last-child) {
+      padding-bottom: 1rem;
+    }
+    .featured-card {
+      .article-header {
+        padding-bottom: 30%;
+      }
+      .article-body {
+        flex: 3;
+        .article-title-text {
+          font-size: 1.3rem;
+          line-height: 1.6;
+        }
+        .article-datetime {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  .banner {
+    background-position: center;
+    .banner-content {
+      padding: 15rem 0;
+      .banner-line {
+        margin-top: 3.6rem;
+        margin-bottom: 3.6rem;
+        height: 3px;
+        width: 70%;
+      }
+      .banner-content-heading {
+        font-size: 3.8rem;
+      }
+      .banner-content-subheading {
+        font-size: 1rem;
+      }
+    }
+  }
+}

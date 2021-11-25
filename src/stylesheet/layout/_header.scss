@@ -1,0 +1,102 @@
+header {
+  position: sticky;
+  width: 100%;
+  top: 0;
+  padding: 1.2rem 0;
+  z-index: 100;
+  background-color: map-get($color, white);
+  border-bottom: 1px solid map-get($color, "grey-b");
+  .nav-container {
+    @extend %flex-row-c-btw-i-center;
+  }
+  .nav-logo-img {
+    width: 18rem;
+  }
+  .nav-list {
+    @extend %flex-row-c-center-i-center;
+    gap: 4rem;
+    .nav-link:link,
+    .nav-link:visited {
+      color: map-get($color, black);
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    .nav-link:hover,
+    .nav-link:active {
+      color: map-get($color, "primary");
+    }
+  }
+  .nav-actions {
+    .nav-actions-list {
+      @extend %flex-row-c-center-i-center;
+      position: relative;
+      gap: 1rem;
+    }
+    .profile-img-box {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 10rem;
+      overflow: hidden;
+      border: 1px solid map-get($color, "grey-b");
+    }
+    .profile-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .profile-name {
+      margin-right: 1rem;
+    }
+    .nav-actions-dropdown {
+      @extend %flex-column-i-start;
+      position: absolute;
+      top: 5rem;
+      right: 0;
+      padding: 0.5rem;
+      border-radius: 1rem;
+      width: 22rem;
+      border: 1px solid map-get($color, "grey-b");
+      background-color: map-get($color, white);
+      .nav-actions-item {
+        width: 100%;
+        .nav-actions-link {
+          display: block;
+          width: 100%;
+          text-align: left;
+          padding: 1rem 2rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: map-get($breakpoints, "wide")) {
+  header {
+    .nav {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: map-get($breakpoints, "small")) {
+  header {
+    padding: 1.4rem 0;
+    .nav-logo-img {
+      width: 4.2rem;
+    }
+    .nav-actions {
+      .nav-actions-dropdown {
+        width: 100vw;
+        right: -2rem;
+        top: 5rem;
+        border-radius: 0;
+        .nav-actions-item {
+          width: 100%;
+          margin-top: 0.5rem;
+          margin-bottom: 0.5rem;
+        }
+        .nav-actions-link {
+          font-size: map-get($font-size, "sm");
+        }
+      }
+    }
+  }
+}

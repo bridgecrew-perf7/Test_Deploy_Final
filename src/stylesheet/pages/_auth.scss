@@ -1,0 +1,64 @@
+.auth {
+  margin: 4rem auto;
+  &.auth-login {
+    max-width: 38rem;
+  }
+  .form-login {
+    border-radius: 1rem;
+    padding: 2.5rem 2rem;
+  }
+  &.auth-register {
+    max-width: 88rem;
+  }
+  .auth-logo {
+    width: 7rem;
+  }
+  .auth-heading {
+    text-align: center;
+    font-size: map-get($font-size, "xxl");
+    font-weight: 600;
+    margin: 1.2rem;
+  }
+  .auth-options {
+    text-align: center;
+    margin-top: 1.2rem;
+    padding: 1.2rem;
+    border-radius: 1rem;
+    border: 1px solid map-get($color, "grey-b");
+    a:link,
+    a:visited {
+      color: map-get($color, "primary");
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    a:hover,
+    a:active {
+      color: map-get($color, "primary-dark");
+    }
+  }
+}
+@media screen and (max-width: map-get($breakpoints, "wide")) {
+  .auth {
+    &.auth-register {
+      max-width: 70rem;
+      .auth-options {
+        font-size: map-get($font-size, sm);
+        margin: 1rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: map-get($breakpoints, "small")) {
+  .auth {
+    .auth-heading {
+      font-size: map-get($font-size, xl);
+    }
+    .auth-options {
+      font-size: map-get($font-size, sm);
+      margin: 1rem;
+    }
+    &.auth-register {
+      max-width: 42rem;
+    }
+  }
+}

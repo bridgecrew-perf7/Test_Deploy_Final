@@ -1,0 +1,21 @@
+.new-post {
+  margin-top: 5rem;
+}
+.post-preview {
+  padding: 3rem;
+  max-width: 105rem;
+  width: 100%;
+  margin: 0 auto;
+  .post-title {
+    font-size: map-get($font-size, xxl);
+  }
+  .cover-img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 2rem;
+  }
+  .post-content {
+    width: 65%;
+    margin: 0 auto;
+  }
+}

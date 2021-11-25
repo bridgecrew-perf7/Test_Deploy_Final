@@ -1,0 +1,55 @@
+.container {
+  padding: 0 3rem;
+  max-width: 121rem;
+  margin: 0 auto;
+  &.container-sm {
+    max-width: 92rem;
+  }
+}
+.row {
+  display: flex;
+  margin: 0 -3rem;
+  flex-wrap: wrap;
+}
+.col {
+  padding: 0 3rem;
+  width: 100%;
+  max-width: 100%;
+}
+@for $i from 1 through 12 {
+  .col-lg-#{$i} {
+    @include col-width($i);
+  }
+}
+
+@media screen and (max-width: map-get($breakpoints, wide)) {
+  @for $i from 1 through 12 {
+    .col-wd-#{$i} {
+      @include col-width($i);
+    }
+  }
+}
+
+@media screen and (max-width: map-get($breakpoints, medium)) {
+  .container {
+    padding: 0 3rem;
+    width: 100%;
+  }
+  @for $i from 1 through 12 {
+    .col-md-#{$i} {
+      @include col-width($i);
+    }
+  }
+}
+
+@media screen and (max-width: map-get($breakpoints, small)) {
+  .container {
+    padding: 0 2rem;
+    width: 100%;
+  }
+  @for $i from 1 through 12 {
+    .col-sm-#{$i} {
+      @include col-width($i);
+    }
+  }
+}

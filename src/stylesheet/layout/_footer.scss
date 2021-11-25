@@ -1,0 +1,69 @@
+footer {
+  border-top: 1px solid map-get($color, "grey-b");
+  margin-top: 6rem;
+  padding-top: 6rem;
+  background-color: map-get($color, white);
+  .footer-logo-img {
+    width: 18rem;
+  }
+  .footer-about {
+    max-width: 38rem;
+    margin: 1.2rem 0 3.5rem;
+  }
+  .footer-socials {
+    .footer-list {
+      @extend %flex-row-i-center;
+      gap: 2.5rem;
+    }
+  }
+  .footer-socials-icon {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+  .footer-list {
+    @extend %flex-row;
+    font-size: map-get($font-size, sm);
+  }
+  .footer-copyright {
+    display: block;
+    margin-top: 5rem;
+    padding: 3rem 2rem;
+    border-top: 1px solid map-get($color, "grey-b");
+    text-align: center;
+    font-weight: 300;
+  }
+}
+@media screen and (max-width: map-get($breakpoints, "medium")) {
+  footer {
+    padding-top: 5rem;
+    .footer-about {
+      max-width: 100%;
+      margin-bottom: 2.5rem;
+    }
+    .footer-socials {
+      margin-bottom: 3rem;
+    }
+    .footer-copyright {
+      font-size: map-get($font-size, sm);
+      padding: 2rem;
+    }
+  }
+}
+@media screen and (max-width: map-get($breakpoints, "small")) {
+  footer {
+    .footer-about {
+      font-size: map-get($font-size, sm);
+    }
+    .footer-socials-icon {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+    .footer-socials {
+      margin-bottom: 1rem;
+    }
+    .footer-copyright {
+      font-size: map-get($font-size, sm);
+      margin-top: 3rem;
+    }
+  }
+}

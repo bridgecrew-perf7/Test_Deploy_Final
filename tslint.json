@@ -1,0 +1,36 @@
+{
+  "extends": ["tslint:latest", "tslint-react"],
+  "rules": {
+    "no-implicit-dependencies": [true, ["@app", "@assets", "@shared", "@config", "@core"]],
+    "no-submodule-imports": false,
+    "trailing-comma": false,
+    "indent": [true, "spaces", 2],
+    "max-line-length": [
+      true,
+      {
+        "limit": 140,
+        "check-strings": true
+      }
+    ],
+    "quotemark": [true, "single", "jsx-double"],
+    "semicolon": [true, "always"],
+    "one-line": [true, "check-catch", "check-finally", "check-else"],
+    "no-shadowed-variable": false,
+    "eofline": true,
+    "no-inferrable-types": [true, "ignore-params"],
+    "file-name-casing": [true, {".tsx": "pascal-case", ".*": "ignore"}],
+    "class-name": true,
+    "variable-name": {
+      "options": [
+        "ban-keywords",
+        "check-format",
+        "allow-leading-underscore",
+        "allow-pascal-case"
+      ]
+    },
+    "ordered-imports": false,
+    "jsx-no-lambda": false,
+    "no-console": false,
+    "only-arrow-functions": false
+  }
+}

@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+}
+html {
+  font-size: 10px;
+}
+body {
+  @include pxRem(font-size, 16);
+  font-family: $font-body;
+  font-size: map-get($font-size, "normal");
+  position: relative;
+  font-weight: 400;
+  color: map-get($color, black);
+  line-height: 1.7;
+  background-color: map-get($color, white);
+  overscroll-behavior: contain;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+}
+image {
+  max-width: 100%;
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  color: map-get($color, black);
+}
+ul {
+  list-style: none;
+}
+input {
+  font-family: $font-body;
+  font-size: map-get($font-size, normal);
+  padding: 1.2rem;
+  border: 1px solid map-get($color, "grey-b");
+  border-radius: 0;
+}
+input[type="date"] {
+  padding: 1rem 1.2rem;
+}
+input:focus {
+  outline-color: map-get($color, "primary");
+}
+h3 {
+  font-size: map-get($font-size, xxl);
+  font-weight: bold;
+  color: map-get($color, black);
+}
+::placeholder {
+  font-size: map-get($font-size, sm);
+}
+.sp-only {
+  display: none;
+}
+.pc-only {
+  display: block;
+}
+@media screen and (max-width: map-get($breakpoints, small)) {
+  input {
+    font-size: map-get($font-size, sm);
+    padding: 0.8rem;
+  }
+  input[type="date"] {
+    padding: 0.8rem 1rem;
+  }
+  .sp-only {
+    display: block;
+  }
+  .pc-only {
+    display: none;
+  }
+}
