@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --debug --output-pathinfo --progress --colors",
-    "build": "npx webpack --env.NODE_ENV=production"
+    "build": "npx webpack --env.NODE_ENV=production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -17,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/st-fe-rd/b-react-ts/issues"
   },
-  "homepage": "https://github.com/st-fe-rd/b-react-ts#readme",
+  "homepage": "https://st-vyduong.github.io/Test_Deploy_Final",
   "dependencies": {
     "@ckeditor/ckeditor5-build-classic": "^31.0.0",
     "@ckeditor/ckeditor5-react": "^3.0.3",
