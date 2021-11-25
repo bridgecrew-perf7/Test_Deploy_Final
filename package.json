@@ -8,7 +8,7 @@
     "start": "webpack-dev-server --debug --output-pathinfo --progress --colors",
     "build": "npx webpack --env.NODE_ENV=production",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
